@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Code Files">
+      <UniqueIdentifier>{3298a47a-9bb5-4e43-a92a-da1af4948945}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code Files\Base Code">
+      <UniqueIdentifier>{640d209c-4b4b-4168-be55-c7f168193e64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code Files\Base Code\Headers">
+      <UniqueIdentifier>{0a0e9398-bfa2-453a-bc58-0be3e157590b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code Files\Base Code\Source">
+      <UniqueIdentifier>{8e0fc9e3-a000-41c2-8f70-9a6f8f4f4a85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code Files\ShaderObjects">
+      <UniqueIdentifier>{77f3194f-900a-4585-a42d-5d4f67758555}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code Files\RenderObjects">
+      <UniqueIdentifier>{af676919-1797-4aa1-9897-5c94b83541bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code Files\Demo Files">
+      <UniqueIdentifier>{9faa60c4-2c6a-4c5a-a1ba-2bc03d9a2300}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code Files\RenderObjects\Source">
+      <UniqueIdentifier>{a06935bd-a3ec-464d-a1ef-efd4a0b9ce1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code Files\RenderObjects\Headers">
+      <UniqueIdentifier>{be110661-a262-4b9e-9338-aa1eb7677a49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code Files\RenderObjects\Source\RawVerts">
+      <UniqueIdentifier>{775d2551-f3cb-43b9-abf6-85bd4b737c22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code Files\RenderObjects\Headers\RawVerts">
+      <UniqueIdentifier>{1b3e627d-093a-494c-ad8e-30677b1aee20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code Files\ShaderObjects\Source">
+      <UniqueIdentifier>{5e290b1d-5d8a-465f-830a-73368e6bdba3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code Files\ShaderObjects\Source\ComputeShaders">
+      <UniqueIdentifier>{2c0ffa5b-2122-4cae-a51b-2fd305614feb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code Files\ShaderObjects\Headers">
+      <UniqueIdentifier>{249e27f7-d3a2-48d7-8d91-226939764fee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code Files\ShaderObjects\Headers\Compute Shaders">
+      <UniqueIdentifier>{7c98c0c9-017e-463f-9b12-296ae4c30374}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ShaderGameV2.cpp">
+      <Filter>Code Files\Demo Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RawVerts.cpp">
+      <Filter>Code Files\RenderObjects\Source\RawVerts</Filter>
+    </ClCompile>
+    <ClCompile Include="Dome.cpp">
+      <Filter>Code Files\RenderObjects\Source\RawVerts</Filter>
+    </ClCompile>
+    <ClCompile Include="ComputeShader.cpp">
+      <Filter>Code Files\ShaderObjects\Source\ComputeShaders</Filter>
+    </ClCompile>
+    <ClCompile Include="utility.cpp">
+      <Filter>Code Files\Base Code\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Dx11Base.cpp">
+      <Filter>Code Files\Base Code\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="FPSCamera.cpp">
+      <Filter>Code Files\Base Code\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="LSParser.cpp">
+      <Filter>Code Files\Base Code\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="LSystem.cpp">
+      <Filter>Code Files\Base Code\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderObject.cpp">
+      <Filter>Code Files\RenderObjects\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>Code Files\ShaderObjects\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader.cpp">
+      <Filter>Code Files\ShaderObjects\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="SkyShader.cpp">
+      <Filter>Code Files\ShaderObjects\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="GPUTreeBuilder.cpp">
+      <Filter>Code Files\ShaderObjects\Source\ComputeShaders</Filter>
+    </ClCompile>
+    <ClCompile Include="TreeSystem.cpp">
+      <Filter>Code Files\RenderObjects\Source\RawVerts</Filter>
+    </ClCompile>
+    <ClCompile Include="Tree.cpp">
+      <Filter>Code Files\RenderObjects\Source\RawVerts</Filter>
+    </ClCompile>
+    <ClCompile Include="ColourShader.cpp">
+      <Filter>Code Files\ShaderObjects\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="LitRawVerts.cpp">
+      <Filter>Code Files\RenderObjects\Source\RawVerts</Filter>
+    </ClCompile>
+    <ClCompile Include="TexturePhongShader.cpp">
+      <Filter>Code Files\ShaderObjects\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Leaves.cpp">
+      <Filter>Code Files\RenderObjects\Source\RawVerts</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Code Files\Demo Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Text.cpp">
+      <Filter>Code Files\ShaderObjects\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="HUD.cpp">
+      <Filter>Code Files\RenderObjects\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Sentence.cpp">
+      <Filter>Code Files\RenderObjects\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="GlobalData.cpp">
+      <Filter>Code Files\Base Code\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="LSystemGPU.cpp">
+      <Filter>Code Files\ShaderObjects\Source\ComputeShaders</Filter>
+    </ClCompile>
+    <ClCompile Include="DDSTextureLoader.cpp">
+      <Filter>Code Files\Base Code\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="LSSpeedTesting.cpp">
+      <Filter>Code Files\Demo Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Dx11Base.h">
+      <Filter>Code Files\Base Code\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="FPSCamera.h">
+      <Filter>Code Files\Base Code\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="LSParser.h">
+      <Filter>Code Files\Base Code\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="LSystem.h">
+      <Filter>Code Files\Base Code\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="utility.h">
+      <Filter>Code Files\Base Code\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderObject.h">
+      <Filter>Code Files\RenderObjects\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Dome.h">
+      <Filter>Code Files\RenderObjects\Headers\RawVerts</Filter>
+    </ClInclude>
+    <ClInclude Include="RawVerts.h">
+      <Filter>Code Files\RenderObjects\Headers\RawVerts</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>Code Files\ShaderObjects\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="SkyShader.h">
+      <Filter>Code Files\ShaderObjects\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>Code Files\ShaderObjects\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderGameV2.h">
+      <Filter>Code Files\Demo Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ComputeShader.h">
+      <Filter>Code Files\ShaderObjects\Headers\Compute Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="GPUTreeBuilder.h">
+      <Filter>Code Files\ShaderObjects\Headers\Compute Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Tree.h">
+      <Filter>Code Files\RenderObjects\Headers\RawVerts</Filter>
+    </ClInclude>
+    <ClInclude Include="TreeSystem.h">
+      <Filter>Code Files\RenderObjects\Headers\RawVerts</Filter>
+    </ClInclude>
+    <ClInclude Include="ColourShader.h">
+      <Filter>Code Files\ShaderObjects\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="LitRawVerts.h">
+      <Filter>Code Files\RenderObjects\Headers\RawVerts</Filter>
+    </ClInclude>
+    <ClInclude Include="TexturePhongShader.h">
+      <Filter>Code Files\ShaderObjects\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Leaves.h">
+      <Filter>Code Files\RenderObjects\Headers\RawVerts</Filter>
+    </ClInclude>
+    <ClInclude Include="Text.h">
+      <Filter>Code Files\ShaderObjects\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sentence.h">
+      <Filter>Code Files\RenderObjects\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="HUD.h">
+      <Filter>Code Files\RenderObjects\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="GlobalData.h">
+      <Filter>Code Files\Base Code\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="LSystemGPU.h">
+      <Filter>Code Files\ShaderObjects\Headers\Compute Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="DDSTextureLoader.h">
+      <Filter>Code Files\Base Code\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="LSSpeedTesting.h">
+      <Filter>Code Files\Demo Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="TreeCompute.hlsl">
+      <Filter>Resource Files</Filter>
+    </FxCompile>
+    <FxCompile Include="TexturedPhong.fx">
+      <Filter>Resource Files</Filter>
+    </FxCompile>
+    <FxCompile Include="Text.fx">
+      <Filter>Resource Files</Filter>
+    </FxCompile>
+    <FxCompile Include="Texture.fx">
+      <Filter>Resource Files</Filter>
+    </FxCompile>
+    <FxCompile Include="Colour.fx">
+      <Filter>Resource Files</Filter>
+    </FxCompile>
+    <FxCompile Include="skyboxNEW.fx">
+      <Filter>Resource Files</Filter>
+    </FxCompile>
+    <FxCompile Include="LSysCompute.hlsl">
+      <Filter>Resource Files</Filter>
+    </FxCompile>
+    <FxCompile Include="LSysCompute2.hlsl">
+      <Filter>Resource Files</Filter>
+    </FxCompile>
+    <FxCompile Include="fontP.ps">
+      <Filter>Resource Files</Filter>
+    </FxCompile>
+    <FxCompile Include="fontV.vs">
+      <Filter>Resource Files</Filter>
+    </FxCompile>
+    <FxCompile Include="ColourPixel.hlsl">
+      <Filter>Resource Files</Filter>
+    </FxCompile>
+    <FxCompile Include="ColourVector.hlsl">
+      <Filter>Resource Files</Filter>
+    </FxCompile>
+    <FxCompile Include="TreeCompute2.hlsl">
+      <Filter>Resource Files</Filter>
+    </FxCompile>
+    <FxCompile Include="ParserCompute.hlsl">
+      <Filter>Resource Files</Filter>
+    </FxCompile>
+    <FxCompile Include="ParserCompute2.hlsl">
+      <Filter>Resource Files</Filter>
+    </FxCompile>
+    <FxCompile Include="ParserCompute3.hlsl">
+      <Filter>Resource Files</Filter>
+    </FxCompile>
+    <FxCompile Include="ParserCompute4.hlsl">
+      <Filter>Resource Files</Filter>
+    </FxCompile>
+    <FxCompile Include="ParserCompute5.hlsl">
+      <Filter>Resource Files</Filter>
+    </FxCompile>
+    <FxCompile Include="ParserComputeBD.hlsl">
+      <Filter>Resource Files</Filter>
+    </FxCompile>
+    <FxCompile Include="ParserCompute6.hlsl">
+      <Filter>Resource Files</Filter>
+    </FxCompile>
+    <FxCompile Include="ParserComputeBDG.hlsl">
+      <Filter>Resource Files</Filter>
+    </FxCompile>
+    <FxCompile Include="ParserComputeSU.hlsl">
+      <Filter>Resource Files</Filter>
+    </FxCompile>
+    <FxCompile Include="ParserComputeNBD.hlsl">
+      <Filter>Resource Files</Filter>
+    </FxCompile>
+    <FxCompile Include="ParserComputeS1.hlsl">
+      <Filter>Resource Files</Filter>
+    </FxCompile>
+    <FxCompile Include="ParserComputeS2.hlsl">
+      <Filter>Resource Files</Filter>
+    </FxCompile>
+  </ItemGroup>
+</Project>

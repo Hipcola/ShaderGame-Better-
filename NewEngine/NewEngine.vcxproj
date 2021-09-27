@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{BAA3E945-BE0F-4F66-A68F-24B26AB8EEBC}</ProjectGuid>
+    <RootNamespace>NewEngine</RootNamespace>
+    <ProjectName>Shader Game</ProjectName>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>C:\boost_1_55_0;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LibraryPath>$(ProjectDir)Effects11\Bin\Desktop_2012\Win32\Release;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ExecutablePath>$(VCInstallDir)bin;$(WindowsSdkDir)bin\NETFX 4.0 Tools;$(WindowsSdkDir)bin;$(FrameworkSDKDir)\bin;$(ExecutablePath)</ExecutablePath>
+    <IncludePath>$(ProjectDir)boost_1_55_0;$(IncludePath)</IncludePath>
+    <ReferencePath>$(ReferencePath)</ReferencePath>
+    <LibraryPath>$(ProjectDir)Effects11\Bin\Desktop_2017_Win10\Win32\Release;$(LibraryPath)</LibraryPath>
+    <SourcePath>$(SourcePath)</SourcePath>
+    <ExcludePath>$(FrameworkSDKDir)\include;$(ExcludePath)</ExcludePath>
+    <CustomBuildBeforeTargets>
+    </CustomBuildBeforeTargets>
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(ProjectDir)</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>winmm.lib;comctl32.lib;xinput.lib;dinput8.lib;dxguid.lib;d3d11.lib;d3dcompiler.lib;Effects11.lib;usp10.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <AdditionalIncludeDirectories>$(ProjectDir)\Effects11\Binary;$(ProjectDir)\Effects11\inc;$(ProjectDir)\boost_1_55_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions> %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_WIN32_WINNT=0x0600;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>winmm.lib;comctl32.lib;xinput.lib;dinput8.lib;dxguid.lib;d3d11.lib;d3dcompiler.lib;Effects11.lib;usp10.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <DelayLoadDLLs>
+      </DelayLoadDLLs>
+      <SubSystem>Windows</SubSystem>
+      <LargeAddressAware>true</LargeAddressAware>
+      <AdditionalOptions> %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <CustomBuildStep>
+      <Command>
+      </Command>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Outputs>
+      </Outputs>
+    </CustomBuildStep>
+    <FxCompile>
+      <ShaderModel>5.0</ShaderModel>
+      <ObjectFileOutput>$(MSBuildProjectDirectory)\%(Filename).cso</ObjectFileOutput>
+    </FxCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="ComputeShader.cpp" />
+    <ClCompile Include="DDSTextureLoader.cpp" />
+    <ClCompile Include="Dome.cpp" />
+    <ClCompile Include="Dx11Base.cpp" />
+    <ClCompile Include="ColourShader.cpp" />
+    <ClCompile Include="FPSCamera.cpp" />
+    <ClCompile Include="GlobalData.cpp" />
+    <ClCompile Include="GPUTreeBuilder.cpp" />
+    <ClCompile Include="HUD.cpp" />
+    <ClCompile Include="Leaves.cpp" />
+    <ClCompile Include="LSParser.cpp" />
+    <ClCompile Include="LSSpeedTesting.cpp" />
+    <ClCompile Include="LSystem.cpp" />
+    <ClCompile Include="LSystemGPU.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="RawVerts.cpp" />
+    <ClCompile Include="RenderObject.cpp" />
+    <ClCompile Include="Sentence.cpp" />
+    <ClCompile Include="Shader.cpp" />
+    <ClCompile Include="ShaderGameV2.cpp" />
+    <ClCompile Include="SkyShader.cpp" />
+    <ClCompile Include="LitRawVerts.cpp" />
+    <ClCompile Include="Text.cpp" />
+    <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="TexturePhongShader.cpp" />
+    <ClCompile Include="Tree.cpp" />
+    <ClCompile Include="TreeSystem.cpp" />
+    <ClCompile Include="utility.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ComputeShader.h" />
+    <ClInclude Include="DDSTextureLoader.h" />
+    <ClInclude Include="Dome.h" />
+    <ClInclude Include="Dx11Base.h" />
+    <ClInclude Include="GlobalData.h" />
+    <ClInclude Include="HUD.h" />
+    <ClInclude Include="Leaves.h" />
+    <ClInclude Include="LitRawVerts.h" />
+    <ClInclude Include="ColourShader.h" />
+    <ClInclude Include="FPSCamera.h" />
+    <ClInclude Include="GPUTreeBuilder.h" />
+    <ClInclude Include="LSParser.h" />
+    <ClInclude Include="LSSpeedTesting.h" />
+    <ClInclude Include="LSystem.h" />
+    <ClInclude Include="LSystemGPU.h" />
+    <ClInclude Include="RawVerts.h" />
+    <ClInclude Include="RenderObject.h" />
+    <ClInclude Include="Sentence.h" />
+    <ClInclude Include="Shader.h" />
+    <ClInclude Include="ShaderGameV2.h" />
+    <ClInclude Include="SkyShader.h" />
+    <ClInclude Include="Text.h" />
+    <ClInclude Include="Texture.h" />
+    <ClInclude Include="TexturePhongShader.h" />
+    <ClInclude Include="Tree.h" />
+    <ClInclude Include="TreeSystem.h" />
+    <ClInclude Include="utility.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="ColourPixel.hlsl">
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">PS_Main</EntryPointName>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">PS_Main</EntryPointName>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(MSBuildProjectDirectory)\%(Filename).cso</ObjectFileOutput>
+    </FxCompile>
+    <FxCompile Include="ColourVector.hlsl">
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">VS_Main</EntryPointName>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">VS_Main</EntryPointName>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+      <DisableOptimizations Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DisableOptimizations>
+      <EnableDebuggingInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</EnableDebuggingInformation>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(MSBuildProjectDirectory)\%(Filename).cso</ObjectFileOutput>
+    </FxCompile>
+    <FxCompile Include="fontP.ps">
+      <FileType>Document</FileType>
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">FontPixelShader</EntryPointName>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">FontPixelShader</EntryPointName>
+      <DisableOptimizations Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DisableOptimizations>
+      <EnableDebuggingInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</EnableDebuggingInformation>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(MSBuildProjectDirectory)\%(Filename).cso</ObjectFileOutput>
+    </FxCompile>
+    <FxCompile Include="fontV.vs">
+      <FileType>Document</FileType>
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">FontVertexShader</EntryPointName>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">FontVertexShader</EntryPointName>
+      <DisableOptimizations Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DisableOptimizations>
+      <EnableDebuggingInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</EnableDebuggingInformation>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(MSBuildProjectDirectory)\%(Filename).cso</ObjectFileOutput>
+    </FxCompile>
+    <FxCompile Include="LSysCompute.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CSMain</EntryPointName>
+      <EnableDebuggingInformation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</EnableDebuggingInformation>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
+      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</SuppressStartupBanner>
+      <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</TreatWarningAsError>
+      <DisableOptimizations Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DisableOptimizations>
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CSMain</EntryPointName>
+      <DisableOptimizations Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DisableOptimizations>
+      <EnableDebuggingInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</EnableDebuggingInformation>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(MSBuildProjectDirectory)\%(Filename).cso</ObjectFileOutput>
+      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</SuppressStartupBanner>
+    </FxCompile>
+    <FxCompile Include="LSysCompute2.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CSMain</EntryPointName>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
+      <EnableDebuggingInformation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</EnableDebuggingInformation>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
+      <SuppressStartupBanner Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</SuppressStartupBanner>
+      <DisableOptimizations Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DisableOptimizations>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(MSBuildProjectDirectory)\%(Filename).cso</ObjectFileOutput>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="ParserCompute.hlsl">
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CSMain</EntryPointName>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+    </FxCompile>
+    <FxCompile Include="ParserCompute2.hlsl">
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CSMain</EntryPointName>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+    </FxCompile>
+    <FxCompile Include="ParserCompute3.hlsl">
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CSMain</EntryPointName>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+    </FxCompile>
+    <FxCompile Include="ParserCompute4.hlsl">
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CSMain</EntryPointName>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+    </FxCompile>
+    <FxCompile Include="ParserCompute5.hlsl">
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CSMain</EntryPointName>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+    </FxCompile>
+    <FxCompile Include="ParserCompute6.hlsl">
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CSMain</EntryPointName>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+    </FxCompile>
+    <FxCompile Include="ParserComputeBD.hlsl">
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CSMain</EntryPointName>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+    </FxCompile>
+    <FxCompile Include="ParserComputeBDG.hlsl">
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CSMain</EntryPointName>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+    </FxCompile>
+    <FxCompile Include="ParserComputeS2.hlsl">
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CSMain</EntryPointName>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+    </FxCompile>
+    <FxCompile Include="ParserComputeNBD.hlsl">
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CSMain</EntryPointName>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+    </FxCompile>
+    <FxCompile Include="ParserComputeS1.hlsl">
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CSMain</EntryPointName>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+    </FxCompile>
+    <FxCompile Include="ParserComputeSU.hlsl">
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CSMain</EntryPointName>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+    </FxCompile>
+    <FxCompile Include="skyboxNEW.fx">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="Texture.fx">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Effect</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
+    </FxCompile>
+    <FxCompile Include="TreeCompute2.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CSMain</EntryPointName>
+      <DisableOptimizations Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DisableOptimizations>
+      <EnableDebuggingInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</EnableDebuggingInformation>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(MSBuildProjectDirectory)\%(Filename).cso</ObjectFileOutput>
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CSMain</EntryPointName>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Colour.fx">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Text.fx">
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">VS_Main</EntryPointName>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Effect</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4.0</ShaderModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="TexturedPhong.fx">
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4.0</ShaderModel>
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">VS_Main</EntryPointName>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Effect</ShaderType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="TreeCompute.hlsl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </FxCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
